@@ -5,7 +5,12 @@ pub struct Interface {
 }
 
 impl Interface {
-    pub fn run() {
-        // Todo ("Run the game")
+    pub fn run(engine: Engine) {
+        let interface = Self {
+            engine,
+        };
+        drop(interface);
+        println!("Let's play Tetris");
     }
+
 }

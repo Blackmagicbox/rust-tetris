@@ -1,11 +1,17 @@
+use self::piece::{Piece, Kind as PieceKind};
+
+mod piece;
+
 pub struct Engine {
     board: Board,
+    bag: Vec<Piece>,
 }
 
 impl Engine {
     pub(crate) fn new() -> Self {
         Engine {
             board: Board::blank(),
+            bag: vec![],
         }
     }
 }
